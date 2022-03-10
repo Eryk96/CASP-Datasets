@@ -54,13 +54,15 @@ class CLI:
 
     def execute_etl(self, strategy: PipelineStrategy):
         """Executes the given strategy"""
-        return strategy.run(
-            self.config, self.get_instance(modules, "module", self.config)
-        )
+        pipeline_order = self.config.get("order")
 
-    def get_pipeline_instance(self) -> object:
+        for id, pipeline_config in pipeline_order.items():
+            print(f"Running pipeline: {id}")    #: TODO - Add logging
+            strategy.run(pipeline_config, self.get_pipeline_instance(pipeline_config))
+
+    def get_pipeline_instance(self, config: dict) -> object:
         """Creates a pipeline instance from configuration"""
-        return self.get_instance(modules, "module", self.config)
+        return self.get_instance(modules, "module", config)
 
     def load_config(self, filename: str) -> dict:
         """Load a configuration file as YAML."""

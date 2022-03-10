@@ -1,8 +1,10 @@
 name: CASP14
 
-module:
-  type: CASP_Pipeline
-  args: {}
+order:
+  1:
+    module:
+      type: CASP_To_CSV
+      args: {}
 
-extract:
-  url: https://predictioncenter.org/casp14/domains_summary.cgi
+    extract:
+      url: https://predictioncenter.org/casp14/domains_summary.cgi
