@@ -1,0 +1,8 @@
+name: CASP14
+
+module:
+  type: CASP_Pipeline
+  args: {}
+
+extract:
+  url: https://predictioncenter.org/casp14/domains_summary.cgi
