@@ -3,8 +3,14 @@ name: CASP14
 order:
   1:
     module:
-      type: CASP_To_CSV
+      type: Summary_To_CSV
       args: {}
 
     extract:
       url: https://predictioncenter.org/casp14/domains_summary.cgi
+
+    transform:
+      class_filter: ["fm"]
+
+    load:
+      output: "data/casp14/domain_summary.csv"

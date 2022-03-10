@@ -1,3 +1,3 @@
-from casp.module.casp_to_csv import CASP_To_CSV
+from casp.module.summary_to_csv import Summary_To_CSV
 
-__all__ = ["CASP_To_CSV"]
+__all__ = ["Summary_To_CSV"]

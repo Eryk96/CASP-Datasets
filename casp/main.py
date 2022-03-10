@@ -18,7 +18,7 @@ class ExtractPipeline(PipelineStrategy):
     """Executes extract step of pipeline"""
 
     def run(self, config: dict, pipeline: object):
-        return pipeline.extract(**config.get("extract"))
+        return pipeline.extract(**config.get("extract") or {})
 
 
 class TransformPipeline(ExtractPipeline):
@@ -26,7 +26,7 @@ class TransformPipeline(ExtractPipeline):
 
     def run(self, config: dict, pipeline: object):
         extract = super().run(config, pipeline)
-        return pipeline.extract(extract, **config.get("transform"))
+        return pipeline.transform(extract, **config.get("transform") or {})
 
 
 class LoadPipeline(TransformPipeline):
@@ -34,7 +34,7 @@ class LoadPipeline(TransformPipeline):
 
     def run(self, config: dict, pipeline: object):
         transform = super().run(config, pipeline)
-        return pipeline.load(transform, **config.get("load"))
+        return pipeline.load(transform, **config.get("load") or {})
 
 
 class RunPipeline(LoadPipeline):
