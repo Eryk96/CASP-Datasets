@@ -37,3 +37,6 @@ order:
 
     extract:
       input: "data/casp14/dssp"
+
+    load:
+      output: "data/casp14/dataset.csv"
