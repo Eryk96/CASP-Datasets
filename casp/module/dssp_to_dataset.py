@@ -7,7 +7,7 @@ from casp.base.etl import BaseETL
 
 
 class DSSP_To_Dataset(BaseETL):
-    """Converts DSSP output files into a dataset"""
+    """Extracts all DSSP output files into a dataset"""
 
     def extract(self, input: str, **kwargs) -> object:
         """Extract data from dssp files"""

@@ -5,7 +5,7 @@ from casp.base.etl import BaseETL
 
 
 class Summary_To_CSV(BaseETL):
-    """CASP Domains Summary Pipeline"""
+    """CASP Domains Summary to CSV Pipeline"""
 
     def extract(self, url: str, **kwargs) -> pd.DataFrame:
         """Extract CASP table data from url"""

@@ -9,8 +9,8 @@ from pathlib import Path
 from casp.base.etl import BaseETL
 
 
-class CSV_To_DSSP(BaseETL):
-    """CASP DSSP Pipeline"""
+class Summary_To_FASTA(BaseETL):
+    """CASP Summary to fasta pipeline"""
 
     def extract(self, input: str, **kwargs) -> pd.DataFrame:
         """Extract CASP domain summary from csv file"""
@@ -32,7 +32,7 @@ class CSV_To_DSSP(BaseETL):
         """Load the list of fasta links into a folder"""
         Path(output).mkdir(parents=True, exist_ok=True)
 
-        # Request each .fasta download PDB files from the links
+        # Request each .fasta download from PDB files from the links
         for link in links:
             req = requests.get(link)
 
