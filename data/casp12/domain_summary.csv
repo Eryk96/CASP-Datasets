@@ -1,0 +1,17 @@
+target,residues,type,domains,residues in domain,classification,pdb
+T0862,239.0,All groups,T0862-D1: 139-239,101.0,fm,5j5v
+T0863,670.0,All groups,T0863-D1: 26-218,193.0,fm,5sy1
+T0864,246.0,All groups,T0864-D1: 1-246,246.0,fm,5d9g
+T0866,152.0,All groups,T0866-D1: 38-141,104.0,fm,5uw2
+T0869,120.0,All groups,T0869-D1: 3-106,104.0,fm,5j4a
+T0870,138.0,All groups,T0870-D1: 2-124,123.0,fm,5j5v
+T0878,358.0,All groups,T0878-D1: 10-356,347.0,fm,5unb
+T0886,346.0,All groups,"T0886-D1: 21-44,172-216",69.0,fm,5fhy
+T0892,193.0,All groups,T0892-D2: 84-193,110.0,fm,5nv4
+T0894,324.0,All groups,T0894-D1: 182-270,89.0,fm,5hkq
+T0900,106.0,All groups,T0900-D1: 5-106,102.0,fm,5aot
+T0904,341.0,All groups,T0904-D1: 61-311,251.0,fm,5a7d
+T0912,624.0,All groups,T0912-D3: 155-257,103.0,fm,5mqp
+T0914,337.0,All groups,"T0914-D1: 3-78,93-174",158.0,fm,6cp8
+T0915,161.0,All groups,T0915-D1: 6-159,154.0,fm,6cp8
+T0918,546.0,All groups,T0918-D1: 42-149,108.0,fm,5uvn
