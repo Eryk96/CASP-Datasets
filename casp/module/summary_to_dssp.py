@@ -9,7 +9,7 @@ from pathlib import Path
 from casp.base.etl import BaseETL
 
 
-class CSV_To_DSSP(BaseETL):
+class Summary_To_DSSP(BaseETL):
     """CASP DSSP Pipeline"""
 
     def extract(self, input: str, **kwargs) -> pd.DataFrame:

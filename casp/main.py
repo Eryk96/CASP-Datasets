@@ -54,8 +54,10 @@ class CLI:
 
     def execute_etl(self, strategy: PipelineStrategy):
         """Executes the given strategy"""
+        name = self.config.get("name")
         pipeline_order = self.config.get("order")
 
+        print(f"Starting pipeline: {name}")
         for id, pipeline_config in pipeline_order.items():
             print(f"Running pipeline: {id}")    #: TODO - Add logging
             strategy.run(pipeline_config, self.get_pipeline_instance(pipeline_config))

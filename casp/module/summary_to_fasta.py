@@ -23,12 +23,12 @@ class Summary_To_FASTA(BaseETL):
         links = []
 
         for pdb in set(df["pdb"]):
-            links.append(f"{pdb_bank}{pdb}.fasta")
+            links.append(f"{pdb_bank}{pdb}")
 
         return links
 
     # TODO: Add logging to follow progress
-    def load(self, links: list, dssp: list, output: str, **kwargs):
+    def load(self, links: list, output: str, **kwargs):
         """Load the list of fasta links into a folder"""
         Path(output).mkdir(parents=True, exist_ok=True)
 
@@ -41,7 +41,7 @@ class Summary_To_FASTA(BaseETL):
 
             # write FASTA output to file
             out_filename = link.split("/")[-1]
-            with open(f"{output}{out_filename}.fasta", "w") as f:
+            with open(f"{output}{out_filename}.fasta", "wb") as f:
                 f.write(req.content)
 
             # sleep for 1 second to avoid overloading the PDB Bank

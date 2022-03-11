@@ -1,36 +1,50 @@
 name: CASP14
 
 order:
-  # 1:
-  #   module:
-  #     type: Summary_To_CSV
-  #     args: {}
+  1:
+    module:
+      type: Summary_To_CSV
+      args: {}
 
-  #   extract:
-  #     url: https://predictioncenter.org/casp14/domains_summary.cgi
+    extract:
+      url: https://predictioncenter.org/casp14/domains_summary.cgi
 
-  #   transform:
-  #     class_filter: ["fm"]
+    transform:
+      class_filter: ["fm"]
 
-  #   load:
-  #     output: "data/casp14/domain_summary.csv"
+    load:
+      output: "data/casp14/domain_summary.csv"
 
-  # 2:
-  #   module:
-  #     type: CSV_To_DSSP
-  #     args: {}
+  2:
+    module:
+      type: Summary_To_DSSP
+      args: {}
 
-  #   extract:
-  #     input: "data/casp14/domain_summary.csv"
+    extract:
+      input: "data/casp14/domain_summary.csv"
 
-  #   transform:
-  #     pdb_bank: https://files.rcsb.org/download/
+    transform:
+      pdb_bank: https://files.rcsb.org/download/
 
-  #   load:
-  #     dssp: ["biolib", "run", "bio_utils/DSSP"]
-  #     output: "data/casp14/dssp/"
+    load:
+      dssp: ["biolib", "run", "bio_utils/DSSP"]
+      output: "data/casp14/dssp/"
 
   3:
+    module:
+      type: Summary_To_FASTA
+      args: {}
+
+    extract:
+      input: "data/casp14/domain_summary.csv"
+
+    transform:
+      pdb_bank: https://www.rcsb.org/fasta/entry/
+
+    load:
+      output: "data/casp14/fasta/"
+
+  4:
     module:
       type: DSSP_To_Dataset
       args: {}
