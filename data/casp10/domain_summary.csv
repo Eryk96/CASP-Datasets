@@ -1,0 +1,13 @@
+target,residues,type,domains,residues in domain,classification,pdb
+T0658,541.0,All groups,T0658-D1: 20-185,166.0,fm,4fj6
+T0666,195.0,All groups,T0666-D1: 1-195,195.0,fm,3ux4
+T0684,270.0,All groups,T0684-D2: 97-264,168.0,fm,4gl6
+T0693,319.0,All groups,T0693-D1: 1-100,100.0,fm,4P7C
+T0695,536.0,All groups,T0695-D1: 1-535,535.0,fm,4UXV
+T0719,726.0,All groups,T0719-D6: 564-726,163.0,fm,4ak1
+T0726,597.0,All groups,"T0726-D3: 448-483,565-587",59.0,fm,4fgm
+T0734,216.0,All groups,T0734-D1: 2-214,213.0,fm,4CSO
+T0735,349.0,All groups,T0735-D2: 262-349,88.0,fm,4g2a
+T0737,292.0,All groups,T0737-D1: 176-292,117.0,fm,3td7
+T0739,770.0,All groups,T0739-D1: 12-96,85.0,fm,4OJ5
+T0756,179.0,Server only,T0756-D2: 94-179,86.0,fm,4g6q

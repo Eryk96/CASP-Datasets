@@ -3,7 +3,7 @@ ETL pipelines for producing Critical Assessment of Protein Structure Prediction 
 
 ## Getting started
 
-You can either download the datasets or run the project. The current datasets does only include PDB entries that are from the FM (free modelling) category. If you want to build datasets that include additional categories you can edit the ```class_filter``` from the config files.
+You can either download the datasets or run the project. The current datasets does only include PDB entries that are from the FM (free modelling) category. If you want to build datasets that include additional classifications you can edit the ```class_filter``` from the config files.
 
 **Requirements**
 - Python 3.8+
@@ -12,27 +12,38 @@ You can either download the datasets or run the project. The current datasets do
 
 Clone the directory and create a virtual environment inside the repository.
 
-```git clone <repository>```\
-```python -m venv venv```
+```bash
+$ git clone <repository>\
+$ python -m venv venv
+```
 
 Activate the virtual environment
 
-```source venv/bin/activate```
+```bash
+$ source venv/bin/activate
+```
 
 Install dependencies and the casp
 
-```python setup.py install```\
-```pip install -r requirements.txt```
+```bash
+$ python setup.py install
+$ pip install -r requirements.txt
+```
 
-Run the pipeline
+Run the desired configuration.
 
-```casp run -c config/casp14.yml```
+```bash
+$ casp run -c config/casp14.yml
+```
 
 ## CASP Datasets
 
 The datasets are found in the data folder. They are organized by the competition number. In each of the folders there is a dataset of the **FM domain** CASP protein that have been merged into a single dataset. Additionally you can find DSSP files entries, domain summary and fasta files of the entries.
 
-[CASP14]() \\
-[CASP13]() \\
-[CASP12]() \\
-[CASP11]() \\
+[CASP14](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp14/dataset.csv) \\
+[CASP13](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp13/dataset.csv) \\
+[CASP12](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp12/dataset.csv) \\
+[CASP11](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp11/dataset.csv) \\
+[CASP10](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp10/dataset.csv) \\
+[CASP9](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp9/dataset.csv) \\
+

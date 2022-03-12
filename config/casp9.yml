@@ -1,0 +1,56 @@
+name: CASP9
+
+order:
+  1:
+    module:
+      type: Summary_To_CSV
+      args: {}
+
+    extract:
+      url: https://predictioncenter.org/casp9/domain_definitions.cgi
+
+    transform:
+      class_filter: ["fm"]
+
+    load:
+      output: "data/casp9/domain_summary.csv"
+
+  2:
+    module:
+      type: Summary_To_DSSP
+      args: {}
+
+    extract:
+      input: "data/casp9/domain_summary.csv"
+
+    transform:
+      pdb_bank: https://files.rcsb.org/download/
+
+    load:
+      dssp: ["biolib", "run", "bio_utils/DSSP"]
+      output: "data/casp9/dssp/"
+
+  3:
+    module:
+      type: Summary_To_FASTA
+      args: {}
+
+    extract:
+      input: "data/casp9/domain_summary.csv"
+
+    transform:
+      pdb_bank: https://www.rcsb.org/fasta/entry/
+
+    load:
+      output: "data/casp9/fasta/"
+
+  4:
+    module:
+      type: DSSP_To_Dataset
+      args: {}
+
+    extract:
+      input: "data/casp9/dssp"
+
+    load:
+      output: "data/casp9/dataset.csv"
