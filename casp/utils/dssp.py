@@ -28,11 +28,11 @@ def parse_dssp_q8(q8: str) -> str:
     """Parse a Q8 string and returns a valid secondary structure"""
     q8 = q8.strip()
     if len(q8) <= 1:
-        return ""
+        return "C"
     
     if q8[0] in Q8:
         return q8[0]
-    return ""
+    return "C"
 
 
 def parse_dssp_line(dssp_line: str) -> tuple:
