@@ -29,7 +29,7 @@ class DSSP_To_Dataset(BaseETL):
         """Load the parsed dssp data into a csv file"""
         Path(output).parent.mkdir(parents=True, exist_ok=True)
 
-        columns = ["pdb", "aa", "chain", "q8", "asa", "rsa", "phi", "psi"]
+        columns = ["pdb", "aa", "chain", "q3", "q8", "asa", "rsa", "phi", "psi"]
         rows = []
 
         for header, line in data:

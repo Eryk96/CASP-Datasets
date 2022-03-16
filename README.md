@@ -1,5 +1,5 @@
-# CASP-Datasets
-ETL pipelines for producing Critical Assessment of Protein Structure Prediction (CASP) datasets for AI models and analysis
+# CASP Secondary Structure Property Datasets
+ETL pipelines for producing Critical Assessment of Protein Structure Prediction (CASP) secondary structure feature datasets for AI models and analysis
 
 ## Getting started
 
@@ -45,5 +45,4 @@ The datasets are found in the data folder. They are organized by the competition
 [CASP12](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp12/dataset.csv) \\
 [CASP11](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp11/dataset.csv) \\
 [CASP10](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp10/dataset.csv) \\
-[CASP9](https://github.com/Eryk96/CASP-Datasets/blob/main/data/casp9/dataset.csv) \\
 

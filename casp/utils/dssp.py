@@ -10,6 +10,7 @@ RES_MAX_ACC = {
 
 # Secondary structure Q8 constants from DSSP documentation
 Q8 = ["H", "B", "E", "G", "I", "T", "S"]
+Q3 = ["H", "B", "B", "H", "H", "C", "C"]
 
 
 def asa_to_rsa(amino_acid: str, asa: int) -> float:
@@ -22,6 +23,14 @@ def asa_to_rsa(amino_acid: str, asa: int) -> float:
         return float(asa) / max_acc
 
     return 0.0
+    
+
+def q8_to_q3(q8: str) -> str:
+    """Convert a Q8 secondary structure to Q3"""
+    if q8 in Q8:
+        return Q3[Q8.index(q8)]
+
+    return "C"
 
 
 def parse_dssp_q8(q8: str) -> str:
@@ -43,9 +52,10 @@ def parse_dssp_line(dssp_line: str) -> tuple:
     aa = dssp_line[13]
     chain = dssp_line[11]
     q8 = parse_dssp_q8(dssp_line[14:28])
+    q3 = q8_to_q3(q8)
     asa = float(dssp_line[34:38].strip())
     rsa = asa_to_rsa(aa, asa)
     phi = float(dssp_line[104:109])
     psi = float(dssp_line[110:115])
 
-    return aa, chain, q8, asa, rsa, phi, psi
+    return aa, chain, q3, q8, asa, rsa, phi, psi

@@ -1,0 +1,4 @@
+autopep8==1.6.0
+lxml==4.8.0
+pandas==1.4.1
+pybiolib==0.2.1493
